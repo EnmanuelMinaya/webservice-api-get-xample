@@ -12,8 +12,8 @@ namespace WebServiceDogApiSample.Services
 {
     public class DogApiService : IDogApiService
     {
-        private const string apiAccessKey = "AGREGAR API KEY AQUI";
-        private const string favoriteId = "12290";
+        private const string ApiAccessKey = "KEY AQUI";
+        private const string FavoriteId = "12290";
            public async Task<FavouriteImageResponse> GetFavourite()
         {
             if(Connectivity.NetworkAccess == NetworkAccess.Internet)
@@ -21,9 +21,9 @@ namespace WebServiceDogApiSample.Services
                 HttpClient httpClient = new HttpClient();
 
                 HttpRequestMessage request = new HttpRequestMessage();
-                request.RequestUri = new System.Uri($"https://api.thedogapi.com/v1/favourites/{favoriteId}");
+                request.RequestUri = new System.Uri($"https://api.thedogapi.com/v1/favourites/{FavoriteId}");
                 request.Method = HttpMethod.Get;
-                request.Headers.Add("x-api-key", apiAccessKey);
+                request.Headers.Add("x-api-key", ApiAccessKey);
 
                 var response = await httpClient.SendAsync(request);
 

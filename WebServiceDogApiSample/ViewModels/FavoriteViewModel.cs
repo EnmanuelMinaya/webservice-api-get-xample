@@ -7,17 +7,17 @@ using Xamarin.Forms;
 
 namespace WebServiceDogApiSample.ViewModels
 {
-    public class ImageViewModel : BaseViewModel
+    public class FavoriteViewModel : BaseViewModel
     {
         public string Url { get; set; }
         public ICommand ShowFavoriteCommand { get; }
 
-        public ImageViewModel(IDogApiService dogApiService)
+        public FavoriteViewModel(IDogApiService dogApiService)
         {
             _dogApiService = dogApiService;
             ShowFavoriteCommand = new Command(OnShow);
         }
-        public ImageViewModel()
+        public FavoriteViewModel()
         {
 
         }

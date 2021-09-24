@@ -16,7 +16,7 @@ namespace WebServiceDogApiSample.Pages
         public FavouritePage()
         {
             InitializeComponent();
-            BindingContext = new ImageViewModel(new DogApiService());
+            BindingContext = new FavoriteViewModel(new DogApiService());
         }
     }
 }

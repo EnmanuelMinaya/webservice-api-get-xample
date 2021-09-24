@@ -6,11 +6,11 @@
     xmlns:services="clr-namespace:WebServiceDogApiSample.Services"
     xmlns:viewModel="clr-namespace:WebServiceDogApiSample.ViewModels">
     <ContentPage.BindingContext>
-        <viewModel:ImageViewModel>
+        <viewModel:FavoriteViewModel>
             <x:Arguments>
                 <services:DogApiService />
             </x:Arguments>
-        </viewModel:ImageViewModel>
+        </viewModel:FavoriteViewModel>
     </ContentPage.BindingContext>
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Button Command="{Binding ShowFavoriteCommand}" Text="Mostrar Favorito" />
